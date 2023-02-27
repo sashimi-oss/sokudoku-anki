@@ -10,11 +10,17 @@
 <body>
   <textarea name="text" id="text" class="text" cols="30" rows="10"></textarea>
   <button onclick="takeValue()">オート</button>
-  <button onclick="clickValue()">ワンクリック</button>
   <button onclick="clickValueEn()">ワンクリック(英語)</button>
   <button onclick="back_color()">背景色</button>
 
-  <div id="display" class="display"></div>
+  <main>
+      <div class="container">
+        <button onclick="clickValueSub()">ワンクリック前</button>
+        <div id="display" class="display"></div>
+        <button onclick="clickValue()">ワンクリック</button>
+      </div>
+  </main>
+  
   
   <script src="sokudoku-annki.js"></script>
 </body>

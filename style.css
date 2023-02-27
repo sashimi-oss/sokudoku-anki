@@ -9,11 +9,15 @@ body {
 }
 
 .display {
-    text-align: center;
     border: 1px solid;
-    margin: 36px 113px;
-    /* height: 67px; */
-    /* padding: 20px 0px 20px; */
-    padding: 30px 36px;
+    height: 100px;
+    width: 1080px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+}
