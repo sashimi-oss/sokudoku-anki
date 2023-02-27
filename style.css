@@ -21,3 +21,23 @@ body {
   display: flex;
   justify-content: center;
 }
+
+
+@media screen and ( max-width : 400px) {
+  
+  .click1 {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    height: 150px;
+    width: 145px;
+  }
+  
+  .click2 {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    height: 150px;
+    width: 142px;
+  }
+}
