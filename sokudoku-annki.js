@@ -1,6 +1,6 @@
 const text = document.getElementById('text');
 const display = document.getElementById('display');
-const a = new RegExp(/\s|。|、/);
+const a = new RegExp(/\n|。|、/);
 
 
 let count = 0;
