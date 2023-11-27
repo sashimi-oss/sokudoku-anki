@@ -1,6 +1,6 @@
 const text = document.getElementById('text');
 const display = document.getElementById('display');
-const a = new RegExp(/\n|。|、/);
+const a = new RegExp(/\n|。|、|,/);
 
 
 let count = 0;
@@ -21,7 +21,7 @@ function takeValue() {
 let nannkaime = -1;
 const clickValue = () => {
   const textValue = text.value;
-  const arr1 = textValue.split(/\n|、|。/);
+  const arr1 = textValue.split(/\n|、|。|,/);
   if (nannkaime + 1 === arr1.length) {
     display.innerHTML = "";
     nannkaime = -1;
@@ -33,7 +33,7 @@ const clickValue = () => {
 
 const clickValueSub = () => {
   const textValue = text.value;
-  const arr1 = textValue.split(/\n|、|。/);
+  const arr1 = textValue.split(/\n|、|。|,/);
   if (nannkaime !== 0) nannkaime--;
   display.innerHTML = arr1[nannkaime];
 }
