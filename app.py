@@ -1,4 +1,5 @@
-from flask import Flask, url_for
+from flask import Flask, render_template
+import my_janome_pra
 
 # ==================================================
 # インスタンス生成
@@ -8,20 +9,15 @@ app = Flask(__name__)
 # ==================================================
 # ルーティング
 # ==================================================
-@app.route('/')
-def show_index():
-    return 'Indexページ'
+# TOPページ
+@app.route('/') 
+def index():
+    word = my_janome_pra.wakati
+    return render_template('index.html', word = word)
 
-@app.route('/hello/')
-@app.route('/hello/<name>')
-def show_hello(name=None):
-    return f'Hello, {name}'
 
 # ==================================================
 # 実行
 # ==================================================
 if __name__ == '__main__':
-    with app.test_request_context():
-        print(url_for('show_index'))
-        print(url_for('show_hello'))
-        print(url_for('show_hello', name='tarou'))
+    app.run()
