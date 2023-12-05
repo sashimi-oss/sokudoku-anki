@@ -1,11 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8" />
-    <title>TOP</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sokudoku-annki</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
 </head>
 <body>
-    <h1>トップ：画面</h1>
-    <hr />
+  <form method="post">
+    <textarea name="text" id="text" class="text" cols="30" rows="10"></textarea>
+    <button onclick="takeValue()">オート</button>
+    <button onclick="clickValueEn()">ワンクリック(英語)</button>
+    <button onclick="back_color()">背景色</button>
+    <input type="submit" value="品詞分解">
+  </form>
+  <main>
+      <div class="container">
+        <button onclick="clickValueSub()">ワンクリック前</button>
+        <div id="display" class="display"></div>
+        <button onclick="clickValue()">ワンクリック</button>
+      </div>
+  </main>
+
+  <script type="text/javascript" src="{{url_for('static', filename='js/sokudoku-annki.js')}}"></script>
 </body>
 </html>
