@@ -10,12 +10,12 @@
  <p>{{text}}</p>
 <!--p id="display"></p> -->
 
-<!-- <form method="get" action="/"> -->
-    <textarea name="text" id="text" class="text" cols="30" rows="10"></textarea>
-    <button onclick="takeResultValue()">オート</button>
-    <button onclick="clickValueEn()">ワンクリック(英語)</button>
-    <button onclick="back_color()">背景色</button>
-    <!-- <input type="submit" value="戻る"> -->
+<form method="get" action="/">
+    <!-- <textarea name="text" id="text" class="text" cols="30" rows="10"></textarea> -->
+    <button type="button" onclick="takeResultValue()">オート</button>
+    <!-- <button onclick="clickValueEn()">ワンクリック(英語)</button> -->
+    <!-- <button onclick="back_color()">背景色</button> -->
+    <input type="submit" value="戻る">
 </form>
 <main>
     <div class="container">
@@ -40,7 +40,7 @@
     {%- endfor %}
 // }
     const display = document.getElementById('display');
-    display.innerHTML=text;
+    // display.innerHTML=text;
     let count = 0;
     function takeResultValue() {
         const arr1 = text;
