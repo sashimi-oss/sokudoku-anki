@@ -1,6 +1,0 @@
-# 条件分岐2
-@app.route('/if/')
-@app.route('/if/<target>')
-def show_jinja_if(target="colorless"):
-    print(target)
-    return render_template('jinja/if_else.html', color=target)
