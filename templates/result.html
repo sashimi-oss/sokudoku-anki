@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
 </head>
 <body>
- <p>{{text}}</p>
 <!--p id="display"></p> -->
 
-<form method="get" action="/">
+<form method="get" action="/" class="form">
     <!-- <textarea name="text" id="text" class="text" cols="30" rows="10"></textarea> -->
     <button type="button" onclick="takeResultValue()">オート</button>
     <!-- <button onclick="clickValueEn()">ワンクリック(英語)</button> -->
@@ -24,9 +23,13 @@
       <button onclick="clickValue()">ワンクリック</button>
     </div>
 </main>
-{%- for i in range( text|length) %}
-    <div>{{i}}番目={{ text[i] }}</div>
-{%- endfor %}
+
+ <p class="text-down">{{text}}</p>
+
+
+{#%- for i in range( text|length) %#}
+    <!-- <div>{#{i}#}番目={#{ text[i] }#}</div> -->
+{#%- endfor %#}
 
 <script type="text/javascript" src="{{url_for('static', filename='js/result.js')}}"></script>
 <script>
@@ -52,7 +55,7 @@
                 clearInterval(start);
                 count = 0;
             }
-        }, 500);
+        }, 400);
     }
 </script>
 </body>

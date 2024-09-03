@@ -22,6 +22,15 @@ body {
   justify-content: center;
 }
 
+.form {
+  margin-bottom: 200px;
+}
+
+.text-down{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 
 @media screen and ( max-width : 400px) {
   
