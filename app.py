@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template
+import jano, translate
 
 # ==================================================
 # インスタンス生成
@@ -19,12 +20,10 @@ def do_get():
 def do_get_post():
     if request.method == 'POST':
         text = request.form.get('text')
-        # cmd = f"python ./jano.py {name}"
-        # subprocess.call(cmd.split())
-        # wakati = jano.wakati
-        import jano
         wakati = jano.keisotai_kaiseki(text)
-        return render_template('result.html', text=wakati)
+        trans = translate.translateText(text)
+
+        return render_template('result.html', text=wakati, trans=trans)
     return render_template('index.html')
 
 # ==================================================
@@ -32,4 +31,4 @@ def do_get_post():
 # ==================================================
 # int(os.getenv('PORT'), 5001)
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=10000, threaded=True, debug=True)
+    app.run(host="0.0.0.0", port=5001, threaded=True, debug=True)
