@@ -2,10 +2,10 @@
 
 # args = sys.argv
 
+from janome.tokenizer import Tokenizer
 
 def keisotai_kaiseki (kotoba):
 
-    from janome.tokenizer import Tokenizer
 
     t = Tokenizer()
 
