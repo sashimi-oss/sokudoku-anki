@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
 import jano, translate
+from waitress import serve # 追加する
 
 # ==================================================
 # インスタンス生成
@@ -31,4 +32,5 @@ def do_get_post():
 # ==================================================
 # int(os.getenv('PORT'), 5001)
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5001, threaded=True, debug=True)
+    # app.run(host="0.0.0.0", port=5001, threaded=True, debug=True)
+    serve(app, host="0.0.0.0", port=5001)
